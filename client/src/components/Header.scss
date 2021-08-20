@@ -2,6 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 100px;
   height: 10vh;
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    min-width: 400px;
+  }
 }
