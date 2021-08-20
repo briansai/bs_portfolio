@@ -2,12 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 50px;
   height: 10vh;
 
   &__right {
     display: flex;
     justify-content: space-between;
+    width: 600px;
     min-width: 400px;
   }
 }

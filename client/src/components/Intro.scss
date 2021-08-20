@@ -1,0 +1,11 @@
+.intro {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  &__svg {
+    width: 600px;
+    height: 600px;
+  }
+}
