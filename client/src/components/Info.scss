@@ -1,28 +1,68 @@
 .info {
-  font-size: 3rem;
-  display: inline-block;
-  opacity: 1;
-  padding: 0.35em 1em;
-  position: relative;
-  z-index: 1;
+  &__name {
+    font-size: 3rem;
+    display: inline-block;
+    opacity: 1;
+    padding: 0.35em 1em;
+    position: relative;
+    z-index: 1;
 
-  &:before {
-    top: 0;
-    left: 0;
+    &:before {
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      bottom: 0;
+      right: 0;
+    }
+
+    &:before,
+    &:after {
+      background: #fff;
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      width: 100%;
+    }
   }
 
-  &:after {
-    bottom: 0;
-    right: 0;
+  &__welcome {
+    font-size: 36px;
   }
 
-  &:before,
-  &:after {
-    background: #fff;
-    content: '';
-    display: block;
-    height: 2px;
-    position: absolute;
-    width: 100%;
+  &__typewriter {
+    width: max-content;
+  }
+
+  &__typewriter--content {
+    overflow: hidden;
+    border-right: 0.15em solid rgb(71, 70, 68);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.25em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
   }
 }
