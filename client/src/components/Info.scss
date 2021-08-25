@@ -1,3 +1,5 @@
+@import '../utils/variables.scss';
+
 .info {
   &__name {
     font-size: 3rem;
@@ -32,37 +34,30 @@
     font-size: 36px;
   }
 
+  &__summary {
+    margin: 40px 0;
+  }
+
   &__typewriter {
-    width: max-content;
+    font-family: fantasy;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    margin-bottom: 40px;
   }
 
-  &__typewriter--content {
-    overflow: hidden;
-    border-right: 0.15em solid rgb(71, 70, 68);
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 0.25em;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  & button {
+    width: 200px;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: $button-round;
+    color: white;
+    background-color: #ff5349;
   }
+}
 
-  /* The typing effect */
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: orange;
-    }
-  }
+h1 {
+  margin: 0.5em auto;
 }
