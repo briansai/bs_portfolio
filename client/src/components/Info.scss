@@ -7,7 +7,6 @@
     opacity: 1;
     padding: 0.35em 1em;
     position: relative;
-    z-index: 1;
 
     &:before {
       top: 0;
@@ -23,10 +22,23 @@
     &:after {
       background: #fff;
       content: '';
-      display: block;
       height: 2px;
       position: absolute;
       width: 100%;
+      animation: animate 1s linear;
+      z-index: 100;
+    }
+  }
+
+  @keyframes animate {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+
+    100% {
+      width: 100%;
+      opacity: 1;
     }
   }
 
@@ -36,14 +48,6 @@
 
   &__summary {
     margin: 40px 0;
-  }
-
-  &__typewriter {
-    font-family: fantasy;
-    font-size: 2.5rem;
-    font-weight: 800;
-    letter-spacing: 0.5rem;
-    margin-bottom: 40px;
   }
 
   & button {
