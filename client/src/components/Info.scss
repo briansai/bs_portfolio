@@ -1,12 +1,25 @@
 @import '../utils/variables.scss';
 
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
   &__name {
     font-size: 3rem;
     display: inline-block;
     opacity: 1;
     padding: 0.35em 1em;
     position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1rem;
 
     &:before {
       top: 0;
@@ -26,28 +39,11 @@
       position: absolute;
       width: 100%;
       animation: animate 1s linear;
-      z-index: 100;
     }
-  }
-
-  @keyframes animate {
-    0% {
-      width: 0;
-      opacity: 0;
-    }
-
-    100% {
-      width: 100%;
-      opacity: 1;
-    }
-  }
-
-  &__welcome {
-    font-size: 36px;
   }
 
   &__summary {
-    margin: 40px 0;
+    margin: 20px 0 40px 0;
   }
 
   & button {

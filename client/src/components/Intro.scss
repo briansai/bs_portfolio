@@ -1,12 +1,14 @@
 .intro {
-  display: flex;
-  height: 90vh;
-  width: 80%;
-  justify-content: space-between;
-  margin: 0 auto;
+  height: 100vh;
+  background: url(../images/bamboo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
 
-  &__svg {
-    width: 600px;
-    height: 600px;
+  &__info {
+    height: inherit;
+    width: inherit;
   }
 }
